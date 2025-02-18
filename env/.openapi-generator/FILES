@@ -9,11 +9,13 @@ docs/DefaultApi.md
 docs/Env.md
 docs/EnvCore.md
 docs/EnvId.md
+docs/OrganizationsOrgIdClientsClientIdGet200Response.md
 docs/OrganizationsOrgIdEnvironmentsGet200Response.md
 docs/OrganizationsOrgIdEnvironmentsPost400Response.md
 git_push.sh
 go.mod
 go.sum
+model__organizations__org_id__clients__client_id__get_200_response.go
 model__organizations__org_id__environments_get_200_response.go
 model__organizations__org_id__environments_post_400_response.go
 model_env.go

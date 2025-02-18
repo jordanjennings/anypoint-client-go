@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -29,5 +28,4 @@ model_post_exchange_apps_body.go
 model_post_exchange_apps_reponse.go
 model_post_exchange_apps_reponse_client_provider.go
 response.go
-test/api_default_test.go
 utils.go

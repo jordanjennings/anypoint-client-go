@@ -77,6 +77,7 @@ All URIs are relative to *https://anypoint.mulesoft.com/accounts/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**OrganizationsOrgIdClientsClientIdGet**](docs/DefaultApi.md#organizationsorgidclientsclientidget) | **Get** /organizations/{orgId}/clients/{clientId} | 
 *DefaultApi* | [**OrganizationsOrgIdEnvironmentsEnvironmentIdDelete**](docs/DefaultApi.md#organizationsorgidenvironmentsenvironmentiddelete) | **Delete** /organizations/{orgId}/environments/{environmentId} | 
 *DefaultApi* | [**OrganizationsOrgIdEnvironmentsEnvironmentIdGet**](docs/DefaultApi.md#organizationsorgidenvironmentsenvironmentidget) | **Get** /organizations/{orgId}/environments/{environmentId} | 
 *DefaultApi* | [**OrganizationsOrgIdEnvironmentsEnvironmentIdPut**](docs/DefaultApi.md#organizationsorgidenvironmentsenvironmentidput) | **Put** /organizations/{orgId}/environments/{environmentId} | 
@@ -89,6 +90,7 @@ Class | Method | HTTP request | Description
  - [Env](docs/Env.md)
  - [EnvCore](docs/EnvCore.md)
  - [EnvId](docs/EnvId.md)
+ - [OrganizationsOrgIdClientsClientIdGet200Response](docs/OrganizationsOrgIdClientsClientIdGet200Response.md)
  - [OrganizationsOrgIdEnvironmentsGet200Response](docs/OrganizationsOrgIdEnvironmentsGet200Response.md)
  - [OrganizationsOrgIdEnvironmentsPost400Response](docs/OrganizationsOrgIdEnvironmentsPost400Response.md)
 

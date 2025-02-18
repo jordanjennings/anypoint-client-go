@@ -158,6 +158,35 @@ paths:
               schema:
                 $ref: '#/components/schemas/env'
           description: Success response
+  /organizations/{orgId}/clients/{clientId}:
+    get:
+      description: Get client ID and client secret
+      parameters:
+      - description: The ID of the organization in GUID format
+        explode: false
+        in: path
+        name: orgId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The client ID of the client
+        explode: false
+        in: path
+        name: clientId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "401":
+          description: Access token is missing or invalid
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_organizations__orgId__clients__clientId__get_200_response'
+          description: Success response
 components:
   responses:
     UnauthorizedError:
@@ -193,6 +222,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/_organizations__orgId__environments_get_200_response'
+      description: Success response
+    SuccessGetClient:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/_organizations__orgId__clients__clientId__get_200_response'
       description: Success response
   schemas:
     env:
@@ -250,6 +285,37 @@ components:
           example: A sample message here
           title: the error message
           type: string
+      type: object
+    _organizations__orgId__clients__clientId__get_200_response:
+      example:
+        grant_types:
+        - grant_types
+        - grant_types
+        user_id: user_id
+        org_id: org_id
+        name: name
+        client_secret: client_secret
+        client_id: client_id
+      properties:
+        client_id:
+          title: Client ID
+          type: string
+        client_secret:
+          title: Client Secret
+          type: string
+        name:
+          title: Credentials name
+          type: string
+        org_id:
+          title: Organization ID
+          type: string
+        user_id:
+          type: string
+        grant_types:
+          items:
+            type: string
+          title: Grants for the client credentials
+          type: array
       type: object
     envId:
       properties:

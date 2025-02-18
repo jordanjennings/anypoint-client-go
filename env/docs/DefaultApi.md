@@ -4,12 +4,86 @@ All URIs are relative to *https://anypoint.mulesoft.com/accounts/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**OrganizationsOrgIdClientsClientIdGet**](DefaultApi.md#OrganizationsOrgIdClientsClientIdGet) | **Get** /organizations/{orgId}/clients/{clientId} | 
 [**OrganizationsOrgIdEnvironmentsEnvironmentIdDelete**](DefaultApi.md#OrganizationsOrgIdEnvironmentsEnvironmentIdDelete) | **Delete** /organizations/{orgId}/environments/{environmentId} | 
 [**OrganizationsOrgIdEnvironmentsEnvironmentIdGet**](DefaultApi.md#OrganizationsOrgIdEnvironmentsEnvironmentIdGet) | **Get** /organizations/{orgId}/environments/{environmentId} | 
 [**OrganizationsOrgIdEnvironmentsEnvironmentIdPut**](DefaultApi.md#OrganizationsOrgIdEnvironmentsEnvironmentIdPut) | **Put** /organizations/{orgId}/environments/{environmentId} | 
 [**OrganizationsOrgIdEnvironmentsGet**](DefaultApi.md#OrganizationsOrgIdEnvironmentsGet) | **Get** /organizations/{orgId}/environments | 
 [**OrganizationsOrgIdEnvironmentsPost**](DefaultApi.md#OrganizationsOrgIdEnvironmentsPost) | **Post** /organizations/{orgId}/environments | 
 
+
+
+## OrganizationsOrgIdClientsClientIdGet
+
+> OrganizationsOrgIdClientsClientIdGet200Response OrganizationsOrgIdClientsClientIdGet(ctx, orgId, clientId).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/mulesoft-anypoint/anypoint-client-go/env"
+)
+
+func main() {
+    orgId := "orgId_example" // string | The ID of the organization in GUID format
+    clientId := "clientId_example" // string | The client ID of the client
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.OrganizationsOrgIdClientsClientIdGet(context.Background(), orgId, clientId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.OrganizationsOrgIdClientsClientIdGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `OrganizationsOrgIdClientsClientIdGet`: OrganizationsOrgIdClientsClientIdGet200Response
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.OrganizationsOrgIdClientsClientIdGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**orgId** | **string** | The ID of the organization in GUID format | 
+**clientId** | **string** | The client ID of the client | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiOrganizationsOrgIdClientsClientIdGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**OrganizationsOrgIdClientsClientIdGet200Response**](OrganizationsOrgIdClientsClientIdGet200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## OrganizationsOrgIdEnvironmentsEnvironmentIdDelete
